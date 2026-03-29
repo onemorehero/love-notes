@@ -82,7 +82,7 @@ export function MessageList() {
                     isMe ? "justify-end text-primary-foreground/80" : "justify-start text-muted-foreground"
                   )}>
                     <span className="text-[10px] opacity-80">
-                      {formatDistanceToNow(new Date(message.createdAt), { addSuffix: true })}
+                      {message.createdAt ? formatDistanceToNow(new Date(message.createdAt), { addSuffix: true }) : "just now"}
                     </span>
                     
                     <button
